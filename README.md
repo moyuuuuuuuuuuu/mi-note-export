@@ -37,6 +37,15 @@ MI_COOKIE='xxxxxx'
 ```bash
 docker run -it --rm --env-file $(pwd)/env -v $(pwd)/public/data:/app/public/data idootop/mi-note-sync:latest
 ```
+ **注意**：
+ - 如果您在 **Linux / macOS / WSL (Bash)** 终端运行，请使用 `$(pwd)`：
+  ```bash
+  docker run ... -v $(pwd)/public/data:/app/public/data ...
+  ```
+  - 如果您在 **Windows PowerShell** 终端运行，请将 `$(pwd)` 替换为 `${PWD}`：
+  ```powershell
+  docker run ... -v ${PWD}/public/data:/app/public/data ...
+  ```
 
 > [!NOTE]
 > 暂不支持备份私密笔记、待办和思维导图
