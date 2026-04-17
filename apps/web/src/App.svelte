@@ -30,7 +30,7 @@
 
   async function initApp() {
     accessPassword = await loadAccessPassword();
-    authKey = `mi-note-auth-${accessPassword || "public"}`;
+    authKey = createAuthKey(accessPassword);
 
     if (!accessPassword) {
       isUnlocked = true;
@@ -55,6 +55,17 @@
     } catch {
       return "";
     }
+  }
+
+  function createAuthKey(password: string) {
+    if (!password) {
+      return "mi-note-auth-public";
+    }
+    const encoded = Array.from(new TextEncoder().encode(password))
+      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .join("")
+      .slice(0, 24);
+    return `mi-note-auth-${encoded}`;
   }
 
   async function loadNotes() {
