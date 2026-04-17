@@ -47,7 +47,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: transparent;
     overflow: hidden;
   }
 
@@ -74,7 +74,9 @@
   .note-header {
     flex-shrink: 0;
     padding: 34px 40px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
   }
 
   .note-title {
@@ -123,7 +125,7 @@
     overflow-y: auto;
     padding: 32px 40px;
     line-height: 1.8;
-    color: #374151;
+    color: #334155;
     white-space: pre-wrap;
     word-break: break-word;
     -webkit-overflow-scrolling: touch;
@@ -209,14 +211,14 @@
   .note-content :global(blockquote) {
     margin: 16px 0;
     padding: 12px 20px;
-    border-left: 4px solid #e5e7eb;
-    background: #f9fafb;
-    color: #6b7280;
+    border-left: 4px solid #bfdbfe;
+    background: #eff6ff;
+    color: #475569;
   }
 
   .note-content :global(hr) {
     border: none;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #e2e8f0;
     margin: 24px 0;
   }
 
