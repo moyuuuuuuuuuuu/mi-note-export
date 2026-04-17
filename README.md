@@ -75,6 +75,25 @@ public
 > [!IMPORTANT]
 > 网页端默认可以访问全部笔记，公网部署需谨慎，防止泄露隐私信息！🚨
 
+### 可选：为网页端增加访问密码
+
+如果你希望打开网页后先输入密码，再查看笔记，在 `public/data` 目录添加 `config.json` 即可（适合群晖 NAS 这类静态部署场景）：
+
+```bash
+cat > public/data/config.json <<EOF
+{
+  "accessPassword": "your-password"
+}
+EOF
+```
+
+- 网页端会读取 `/data/config.json`，如果 `accessPassword` 为空或文件不存在，则保持原样直接访问（默认行为）。
+- 该功能仅影响网页端展示，不会修改或影响「同步笔记」逻辑与数据文件。
+
+### NAS 上运行 `serve` 的提示
+
+如果你看到 `Cannot copy server address to clipboard`（缺少 `xsel`），这是 `serve` 尝试复制地址到剪贴板导致的提示，不影响服务可用性。项目已默认使用 `serve -n` 关闭剪贴板功能，NAS 上可以直接忽略这类提示。
+
 ## 项目背景
 
 犹记得我用过的最后一部小米手机是 [红米 Note 4X](https://www.mi.com/redminote4x) —— 当年的千元机性价比之王，陪我走过了大学的青春岁月，记录了许多美好回忆。不过毕业之后，我就再没用过小米手机。

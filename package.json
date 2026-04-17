@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"sync": "node --env-file env apps/node/dist/sync.js",
-		"web": "cp -r apps/web/dist/* public && serve -s public",
+		"web": "cp -r apps/web/dist/* public && serve -s public -n",
 		"start": "pnpm sync && pnpm web"
 	},
 	"packageManager": "pnpm@10.14.0",

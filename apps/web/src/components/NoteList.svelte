@@ -171,8 +171,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: #fff;
-    border-right: 1px solid #e5e7eb;
+    background: #ffffff;
   }
 
   .folder-section {
@@ -200,8 +199,8 @@
     padding: 10px 12px;
     font-size: 14px;
     color: #111827;
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
     border-radius: 8px;
     cursor: pointer;
     outline: none;
@@ -216,7 +215,7 @@
   .search-section {
     flex-shrink: 0;
     padding: 12px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e2e8f0;
     background: #fff;
   }
 
@@ -230,8 +229,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
     border-radius: 8px;
     padding: 8px 12px;
     transition: all 0.2s;
@@ -241,7 +240,7 @@
   .search-box:focus-within {
     background: #fff;
     border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
   }
 
   .search-icon {
@@ -311,20 +310,21 @@
     padding: 14px 12px;
     border: none;
     background: transparent;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s;
     text-align: left;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     -webkit-tap-highlight-color: transparent;
   }
 
   .note-item:hover {
-    background: #f9fafb;
+    background: #f8fafc;
   }
 
   .note-item.active {
-    background: #f9fafb;
+    background: #eff6ff;
+    box-shadow: inset 0 0 0 1px #bfdbfe;
   }
 
   @media (max-width: 768px) {
@@ -363,13 +363,13 @@
 
   .note-date {
     font-size: 12px;
-    color: #9ca3af;
+    color: #94a3b8;
     white-space: nowrap;
   }
 
   .note-snippet {
     font-size: 13px;
-    color: #6b7280;
+    color: #64748b;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
